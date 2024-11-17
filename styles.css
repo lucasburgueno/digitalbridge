@@ -253,7 +253,7 @@ nav {
 /* Team Section */
 .team {
     padding: 6rem 2rem;
-    background-image: url('/images/NUESTRO-EQUIPO.png');
+    background-image: url('./images/NUESTRO-EQUIPO.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -374,7 +374,7 @@ nav {
 /* Contact Section */
 .contact {
     padding: 5rem 2rem;
-    background-image: url('/images/CONTACTO.png');
+    background-image: url('./images/CONTACTO.png');
     background-size: cover;
     background-position: center;
     color: whitesmoke;
