@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Bridge - Agencia Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/images/isologotipo.png" alt="Digital Bridge Logo" class="logo">
+            <div class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#servicios">SERVICIOS</a>
+                <a href="#nosotros">NOSOTROS</a>
+                <a href="#contacto">CONTACTO</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>AGENCIA DIGITAL</h1>
+            <p>Impulsamos a las empresas en el mundo digital con estrategias de marketing innovadoras y efectivas.</p>
+            <a href="#servicios" class="btn">Más Info</a>
+            <a href="#contacto" class="btn">Contacto</a>
+        </div>
+    </section>
+
+    <section id="nosotros" class="about">
+        <div class="about-content">
+            <div>
+                <h2>¿Quiénes somos?</h2>
+                <p>Somos una <strong>consultora de marketing digital</strong> formada por un equipo de jóvenes profesionales <strong>apasionados por la creatividad y la innovación</strong>. Nos especializamos en crear estrategias únicas para potenciar la presencia online de cada uno de nuestros clientes.</p>
+                <p>Trabajamos de la mano con las empresas para entender sus necesidades y objetivos, aplicando nuestros conocimientos y experiencia para diseñar <strong>campañas efectivas y personalizadas</strong>.</p>
+            </div>
+            <img src="/images/quienes-somos.png" alt="Equipo Digital Bridge">
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <!-- Identidad Visual -->
+            <div class="service-card">
+                <img src="/images/Identidad-visual.png" alt="Identidad Visual">
+                <h3>Identidad Visual</h3>
+                <div class="service-preview">
+                    <p>Asesoramos en la construcción de una identidad visual única que refleje la esencia y valores de cada negocio.</p>
+                    <button class="ver-mas-btn" onclick="mostrarServicio(0)">Ver más</button>
+                </div>
+            </div>
+    
+            <!-- Estrategia de Marketing Digital -->
+            <div class="service-card">
+                <img src="/images/Estrategia-marketing.png" alt="Estrategia de Marketing Digital">
+                <h3>Estrategia de Marketing Digital</h3>
+                <div class="service-preview">
+                    <p>Desarrollamos estrategias digitales alineadas con los objetivos de cada negocio.</p>
+                    <button class="ver-mas-btn" onclick="mostrarServicio(1)">Ver más</button>
+                </div>
+            </div>
+    
+            <!-- Análisis de Resultados -->
+            <div class="service-card">
+                <img src="/images/Analisis-resultado.png" alt="Análisis de Resultados en Tiempo Real">
+                <h3>Análisis de Resultados en Tiempo Real</h3>
+                <div class="service-preview">
+                    <p>Asesoramos en el monitoreo y análisis del rendimiento de las campañas.</p>
+                    <button class="ver-mas-btn" onclick="mostrarServicio(2)">Ver más</button>
+                </div>
+            </div>
+    
+            <!-- Automatización -->
+            <div class="service-card">
+                <img src="/images/automatizacion.png" alt="Automatización de Procesos de Marketing">
+                <h3>Automatización de Procesos de Marketing</h3>
+                <div class="service-preview">
+                    <p>Guiamos la implementación de sistemas de automatización que mejoran la eficiencia operativa.</p>
+                    <button class="ver-mas-btn" onclick="mostrarServicio(3)">Ver más</button>
+                </div>
+            </div>
+    
+            <!-- Transformación Digital -->
+            <div class="service-card">
+                <img src="/images/transformacion-digitakl.png" alt="Consultoría en Transformación Digital">
+                <h3>Consultoría en Transformación Digital</h3>
+                <div class="service-preview">
+                    <p>Acompañamos a PyMEs en su transición hacia la digitalización.</p>
+                    <button class="ver-mas-btn" onclick="mostrarServicio(4)">Ver más</button>
+                </div>
+            </div>
+    
+            <!-- SEO Estratégico -->
+            <div class="service-card">
+                <img src="/images/posicionamiento-seo.png" alt="Consultoría en Posicionamiento SEO Estratégico">
+                <h3>Consultoría en Posicionamiento SEO Estratégico</h3>
+                <div class="service-preview">
+                    <p>Ayudamos a PyMEs a fortalecer su visibilidad en buscadores.</p>
+                    <button class="ver-mas-btn" onclick="mostrarServicio(5)">Ver más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlay para el fondo oscuro -->
+    <div class="service-overlay" onclick="cerrarServicio()"></div>
+
+    <!-- Modal para mostrar el servicio completo -->
+    <div class="service-modal">
+        <button class="close-btn" onclick="cerrarServicio()">&times;</button>
+        <h3></h3>
+        <p></p>
+        <a href="#contacto" class="btn-solicitar">Solicitar Presupuesto</a>
+    </div>
+
+    <section id="team" class="team">
+        <div id="team" class="section team">
+            <div class="team-container">
+                <div class="team-header">
+                    <h2>¡Hola!</h2>
+                    <p>Te presentamos a nuestro gran equipo</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/images/delfi.png" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h3>Delfina Rojas</h3>
+                            <p class="position">Directora de Estrategia y Planificación</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/images/caro.png" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h3>Carolina Erglis</h3>
+                            <p class="position">Gerente de Marketing Integral (CEO)</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/images/nico-o.png" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h3>Nicolás Ocampo</h3>
+                            <p class="position">Especialista en SEO y Análisis de datos</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/images/agos.png" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h3>Agostina Burgueño</h3>
+                            <p class="position">Diseñador Gráfico</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/images/lourdes.png" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h3>Lourdes Vicario</h3>
+                            <p class="position">Especialista en Publicidad Digital</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/images/bau.png" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h3>Bautista Aguirre</h3>
+                            <p class="position">Diseño UX - UY</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/images/nico-q.png" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h3>Nicolás Questa</h3>
+                            <p class="position">Content Creator</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="/images/agus.png" alt="Team Member">
+                        </div>
+                        <div class="member-info">
+                            <h3>Agustina Golato</h3>
+                            <p class="position">Community Manager</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    
+                    <!-- Repeat team-member div for each team member -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="contact-content">
+            <h2>Contacto</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Teléfono" required>
+                <textarea placeholder="Mensaje" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Datos de los servicios
+        const servicios = [
+    {
+        titulo: "Identidad Visual",
+        descripcion: "Asesoramos en la construcción de una identidad visual única que refleje la esencia y valores de cada negocio. Buscamos identificar estilos de logos que destaquen y ayuden a las marcas a posicionarse, ofreciendo una visión estratégica que garantice coherencia y reconocimiento en el mercado."
+    },
+    {
+        titulo: "Estrategia de Marketing Digital",
+        descripcion: "Desarrollamos estrategias digitales alineadas con los objetivos de cada negocio. Desde la planificación hasta la ejecución, ofrecemos una visión holística de SEO, SEM, redes sociales y email marketing, adaptando cada acción para maximizar los resultados y fortalecer la presencia digital."
+    },
+    {
+        titulo: "Análisis de Resultados en Tiempo Real",
+        descripcion: "Asesoramos en el monitoreo y análisis del rendimiento de las campañas, utilizando herramientas avanzadas para hacer ajustes estratégicos en tiempo real. Nuestro objetivo es optimizar los resultados y ayudar a cada cliente a entender su impacto en el mercado."
+    },
+    {
+        titulo: "Automatización de Procesos de Marketing",
+        descripcion: "Guiamos la implementación de sistemas de automatización que mejoran la eficiencia operativa y maximizan el ROI. Nuestro enfoque consultivo asegura que cada herramienta esté alineada con la estrategia general del negocio, reduciendo costos y optimizando el tiempo de trabajo."
+    },
+    {
+        titulo: "Consultoría en Transformación Digital",
+        descripcion: "Acompañamos a PyMEs en su transición hacia la digitalización, ofreciendo una visión estratégica y asesoramiento continuo. Ayudamos a integrar tecnologías digitales en cada área del negocio, mejorando su competitividad y adaptándolas al entorno dinámico actual."
+    },
+    {
+        titulo: "Consultoría en Posicionamiento SEO Estratégico",
+        descripcion: "Ayudamos a PyMEs a fortalecer su visibilidad en buscadores a través de un enfoque SEO basado en análisis profundo y adaptado a sus objetivos comerciales. Realizamos auditorías detalladas de su sitio web, investigación de palabras clave y optimización de contenido, siempre alineados con las tendencias de búsqueda y las mejores prácticas de la industria. Además, brindamos asesoramiento continuo para mantener y mejorar su posicionamiento, maximizando así el tráfico orgánico y el alcance de su marca en el largo plazo."
+    }
+];
+
+        function mostrarServicio(index) {
+            const modal = document.querySelector('.service-modal');
+            const overlay = document.querySelector('.service-overlay');
+            
+            modal.querySelector('h3').textContent = servicios[index].titulo;
+            modal.querySelector('p').textContent = servicios[index].descripcion;
+            
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function cerrarServicio() {
+            const modal = document.querySelector('.service-modal');
+            const overlay = document.querySelector('.service-overlay');
+            
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
